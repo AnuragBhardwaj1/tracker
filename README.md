@@ -22,8 +22,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
+ Useage is pretty simple.
+ Use 
+  track :attribute_name
+ to specify which attribute is to be tracked. eg:
+  ````ruby
+   class User < ActiveRecord::Base
+    track :name
+   end
+  ````
+ Whenever name attribute will be changed it ll be logged in the tracker table.
+ options can be specified as:
+  ````ruby
+    track name: :name1, :name2
+  ````
+  resulted changes will be logged when the attribute `:name`, will change from `name1` or `name2`.
+  
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
