@@ -1,5 +1,8 @@
 require "tracker/version"
+require 'tracker/track_methods'
+require 'active_record'
+require 'rails'
 
 module Tracker
-  # Your code goes here...
+  ActiveRecord::Base.send(:include, TrackMethods)
 end
