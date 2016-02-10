@@ -20,6 +20,22 @@ Or install it yourself as:
 
     $ gem install tracker
 
+## Basic Set-up
+  
+  It expects you to have a table `trackers` in database.
+  you can you migration:
+
+  ````ruby
+    create_table :trackers do |t|
+      t.string :class_name_record
+      t.string :attribute_name_record
+      t.text :before_value_record
+      t.text :after_value_record
+      t.timestamps null: false
+    end
+  ````
+
+
 ## Usage
 
  Useage is pretty simple.
